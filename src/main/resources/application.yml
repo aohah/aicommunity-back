@@ -7,7 +7,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     #数据库链接url
-    url: jdbc:mysql://10.105.22.117:22:3306/Curriculum_design_assignments?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    url: jdbc:mysql://10.105.22.117:3306/Curriculum_design_assignments?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
     username: root
     password: 521@FuHua
 #mybatis配置
