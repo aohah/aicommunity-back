@@ -1,8 +1,23 @@
-spring:
-  datasource:
-    url: jdbc:mysql://${mysql.ip}:${mysql.port}/${mysql.db}?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-    username: ${mysql.username}
-    password: ${mysql.password}
-
 server:
-  port: ${server.port}
+  port: 8080 #指定访问端口
+spring:
+  #mysql配置
+  datasource:
+    #驱动类名称
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    #数据库链接url
+    url: jdbc:mysql://10.105.22.117:22:3306/Curriculum_design_assignments?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    username: root
+    password: 521@FuHua
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:/com.data.Dao/*.xml   #xml文件
+  type-aliases-package: com.data.unit  #别名
+#配置日志使用
+logging:
+  level:
+    root: info
+    com.example: debug #指定那个包生成日志
+  file:
+    name: log/log.log
